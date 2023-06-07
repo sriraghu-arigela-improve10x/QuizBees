@@ -7,17 +7,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quizbee.databinding.QuestionsItemBinding;
-import com.example.quizbee.databinding.QuestionsItemBinding;
 import com.example.quizbee.model.Questions;
-import com.example.quizbee.model.QuizBee;
 
 import java.util.List;
 
 public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsViewHolder> {
-    private List<QuizBee> quizBeeList;
+    private List<Questions> questions;
 
-    void setData(List<QuizBee> quizBees) {
-        quizBeeList = quizBees;
+    private OnItemActionListener onItemActionListener;
+
+    void setOnItemActionListener(OnItemActionListener onItemActionListener) {
+        this.onItemActionListener = onItemActionListener;
+    }
+
+    void setData(List<Questions> quizBees) {
+        questions = quizBees;
         notifyDataSetChanged();
     }
     @NonNull
@@ -30,12 +34,15 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull QuestionsViewHolder holder, int position) {
-        QuizBee quizBee = quizBeeList.get(position);
-        holder.questionsItemBinding.quitionNumber.setText(String.valueOf(position + 1));
+        Questions questions = this.questions.get(position);
+        holder.questionsItemBinding.quitionNumber.setText(String.valueOf(questions.getNumber()));
+        holder.questionsItemBinding.getRoot().setOnClickListener(v -> {
+            onItemActionListener.onItemClicked((questions));
+        });
     }
 
     @Override
     public int getItemCount() {
-        return quizBeeList.size();
+        return questions.size();
     }
 }
