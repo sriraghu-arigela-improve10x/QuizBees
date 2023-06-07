@@ -4,6 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
     tools:context=".QuestionsActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quizbee_rv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quition_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizbee_rv" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/quition_txt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/quition_txt"
+        app:layout_constraintTop_toBottomOf="@+id/quition_txt">
+
+        <RadioButton
+            android:id="@+id/radio_cr_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radio_cr_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radio_cr_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radio_cr_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="RadioButton" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/previous_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#FF5722"
+        android:text="Previous"
+        android:textAllCaps="false"
+        android:textColor="#F1EFEF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:backgroundTint="#FF5722"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#F1EFEF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/previous_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/previous_btn"
+        app:layout_constraintTop_toTopOf="@+id/previous_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
