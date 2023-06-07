@@ -18,5 +18,13 @@ public class QuestionsActivity extends AppCompatActivity {
         binding = ActivityQuestionsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().setTitle("QuizBee");
+        setupRV();
+        setupAdapter();
+    }
+
+    private void setupAdapter() {
+    }
+
+    private void setupRV() {
     }
 }
