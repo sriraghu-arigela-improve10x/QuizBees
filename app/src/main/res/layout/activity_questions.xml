@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FF5722"
     android:padding="8dp"
     tools:context=".QuestionsActivity">
 
@@ -93,9 +94,25 @@
         android:textAllCaps="false"
         android:textColor="#F1EFEF"
         android:textSize="18sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/previous_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/previous_btn"
+        app:layout_constraintTop_toTopOf="@+id/previous_btn" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF5722"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="#F6F4F4"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/previous_btn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/previous_btn"
         app:layout_constraintTop_toTopOf="@+id/previous_btn" />
 

@@ -14,5 +14,10 @@ public class ResultActivity extends AppCompatActivity {
         binding = ActivityResultBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().setTitle("Result");
+        getQuestions();
+    }
+
+    private void getQuestions() {
+
     }
 }
